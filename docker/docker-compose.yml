@@ -1,0 +1,11 @@
+version: "3"
+services:
+
+  foodlife-websocket:
+    image: 659026375640.dkr.ecr.ap-northeast-1.amazonaws.com/foodlife-socket:1.4.0
+    restart: always
+    ports:
+      - "8001:80"
+    volumes:
+      - ./log/nginx:/var/log/nginx/
+      - ./log/socket:/code/log
